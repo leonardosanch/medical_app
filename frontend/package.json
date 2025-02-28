@@ -1,0 +1,14 @@
+{
+    "name": "medical-app-frontend",
+    "version": "1.0.0",
+    "description": "Frontend for the Healthcare Translation Web App",
+    "main": "index.js",
+    "scripts": {
+        "start": "live-server --port=3000"
+    },
+    "author": "",
+    "license": "MIT",
+    "devDependencies": {
+        "live-server": "^1.2.2"
+    }
+}

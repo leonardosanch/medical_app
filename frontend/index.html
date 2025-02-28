@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HealthTalk - Medical Translation</title>
+    <link rel="stylesheet" href="/static/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <h1><i class="fas fa-heartbeat"></i> HealthTalk</h1>
+        <p class="subtitle">Real-time medical translation</p>
+      </div>
+    </header>
+
+    <main class="container">
+      <div class="language-selector">
+        <div class="language-box source">
+          <select id="sourceLang" name="source_lang">
+            <option value="en">English</option>
+            <option value="es">Spanish</option>
+            <option value="fr">French</option>
+            <option value="de">German</option>
+            <option value="pt">Portuguese</option>
+            <option value="it">Italian</option>
+          </select>
+        </div>
+        <div class="switch-languages">
+          <button id="switchLanguages" aria-label="Swap languages">
+            <i class="fas fa-exchange-alt"></i>
+          </button>
+        </div>
+        <div class="language-box target">
+          <select id="targetLang" name="target_lang">
+            <option value="es">Spanish</option>
+            <option value="en">English</option>
+            <option value="fr">French</option>
+            <option value="de">German</option>
+            <option value="pt">Portuguese</option>
+            <option value="it">Italian</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="transcription-area">
+        <div class="transcript-box source-transcript">
+          <div class="transcript-header">
+            <h3>Original Text</h3>
+            <div class="controls">
+              <button
+                id="startRecording"
+                class="control-btn record"
+                aria-label="Start recording"
+              >
+                <i class="fas fa-microphone"></i>
+              </button>
+              <button
+                id="stopRecording"
+                class="control-btn stop hidden"
+                aria-label="Stop recording"
+              >
+                <i class="fas fa-stop-circle"></i>
+              </button>
+              <button
+                id="clearSource"
+                class="control-btn clear"
+                aria-label="Clear text"
+              >
+                <i class="fas fa-trash-alt"></i>
+              </button>
+            </div>
+          </div>
+          <div class="transcript-content">
+            <textarea
+              id="inputText"
+              placeholder="Speak or type here..."
+            ></textarea>
+            <div id="recordingStatus" class="status-indicator hidden">
+              <span class="pulse"></span> Listening...
+            </div>
+          </div>
+        </div>
+
+        <button id="translateBtn" class="translate-btn">
+          <i class="fas fa-language"></i> Translate
+        </button>
+
+        <div class="transcript-box target-transcript">
+          <div class="transcript-header">
+            <h3>Translation</h3>
+            <div class="controls">
+              <button
+                id="speakTranslation"
+                class="control-btn speak"
+                aria-label="Play translation"
+              >
+                <i class="fas fa-volume-up"></i>
+              </button>
+              <button
+                id="copyTranslation"
+                class="control-btn copy"
+                aria-label="Copy translation"
+              >
+                <i class="fas fa-copy"></i>
+              </button>
+            </div>
+          </div>
+          <div class="transcript-content">
+            <div id="translatedText" class="translated-text"></div>
+          </div>
+        </div>
+      </div>
+
+      <div id="statusMessage" class="status-message hidden"></div>
+    </main>
+
+    <footer>
+      <div class="footer-container">
+        <p>&copy; 2025 HealthTalk - Safe and accurate medical translation</p>
+      </div>
+    </footer>
+
+    <script src="/static/js/speech-recognition.js"></script>
+    <script src="/static/js/translation.js"></script>
+    <script src="/static/js/text-to-speech.js"></script>
+    <script src="/static/js/app.js"></script>
+  </body>
+</html>

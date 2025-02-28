@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inicio - Healthcare Translation App</title>
+    <link rel="stylesheet" href="/static/css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Healthcare Translation App</h1>
+    </header>
+
+    <div class="container">
+      <h2>Bienvenido a la aplicación de traducción médica</h2>
+      <p>
+        Utiliza la aplicación para traducir texto en tiempo real. Puedes hablar
+        o escribir el texto a traducir.
+      </p>
+
+      <!-- Formulario para ingresar el texto y seleccionar idiomas -->
+      <form id="translation-form">
+        <div class="form-group">
+          <label for="inputText">Texto a traducir:</label>
+          <textarea
+            id="inputText"
+            name="text"
+            rows="4"
+            placeholder="Escribe o graba tu mensaje aquí"
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="sourceLang">Idioma de origen:</label>
+          <select id="sourceLang" name="source_lang">
+            <option value="en">Inglés</option>
+            <option value="es">Español</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="targetLang">Idioma destino:</label>
+          <select id="targetLang" name="target_lang">
+            <option value="es">Español</option>
+            <option value="en">Inglés</option>
+          </select>
+        </div>
+
+        <button type="submit">Traducir</button>
+      </form>
+
+      <!-- Sección para mostrar el resultado de la traducción -->
+      <div id="result">
+        <h3>Traducción:</h3>
+        <p id="translatedText"></p>
+      </div>
+    </div>
+
+    <script src="/static/js/app.js"></script>
+  </body>
+</html>
