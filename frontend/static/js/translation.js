@@ -5,7 +5,7 @@
 
 class TranslationService {
   constructor() {
-    this.apiUrl = 'http://18.117.229.34:8000/api/translate';
+    this.apiUrl = 'https://api.leonardosanchez.online/api/translate';
     this.translateBtn = document.getElementById('translateBtn');
     this.inputText = document.getElementById('inputText');
     this.translatedText = document.getElementById('translatedText');

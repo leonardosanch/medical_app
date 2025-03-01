@@ -5,7 +5,7 @@
 
 class TextToSpeechService {
   constructor() {
-    this.apiUrl = 'http://18.117.229.34:8000/api/text-to-speech';
+    this.apiUrl = 'https://api.leonardosanchez.online/api/text-to-speech';
     this.speakBtn = document.getElementById('speakTranslation');
     this.translatedText = document.getElementById('translatedText');
     this.targetLang = document.getElementById('targetLang');
