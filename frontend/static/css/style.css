@@ -326,21 +326,24 @@ footer {
     max-width: calc(50% - 35px);
   }
   
-  .translate-btn {
+  translate-btn {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 10;
-    height: 120px; /* Altura fija para el botón vertical */
-    width: 40px; /* Ancho reducido */
-    flex-direction: column; /* Apilar el contenido verticalmente */
-    font-size: 0.8rem;
-    margin:0;
-    padding: 10px 5px;
+    height: auto; /* Altura automática */
+    width: auto; /* Ancho automático */
+    flex-direction: row; /* Icono y texto en línea */
+    padding: 1rem 2rem; /* Espaciado adecuado */
+    font-size: 1rem; /* Tamaño de fuente legible */
+    min-width: 160px; /* Ancho mínimo suficiente */
+    white-space: nowrap; /* Evitar salto de línea */
   }
+
   .translate-btn i {
-    margin-bottom: 5px;
+    margin-bottom: 0;
+    margin-right: 8px; /* Espaciado entre icono y texto */
   }
 }
 
