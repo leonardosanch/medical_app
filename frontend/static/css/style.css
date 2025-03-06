@@ -209,27 +209,39 @@ header h1 {
   background-color: #f8f9fa;
 }
 
-/* Translation Button - Ajustes estéticos */
+/* Translation Button - Nuevo estilo */
+.translate-btn-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
 .translate-btn {
   background-color: var(--primary-color);
   color: white;
   border: none;
-  border-radius: var(--border-radius);
-  padding: 0.5rem 1rem; /* Reducir el padding */
-  font-size: 0.9rem; /* Reducir tamaño de fuente */
+  border-radius: 30px;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
   cursor: pointer;
   transition: var(--transition);
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.3rem;
-  margin: 0.5rem auto; /* Reducir margen vertical */
-  min-width: 120px; /* Reducir ancho mínimo */
-  max-width: 150px; /* Limitar ancho máximo */
+  gap: 0.5rem;
+  min-width: 140px;
+  box-shadow: 0 4px 8px rgba(52, 152, 219, 0.25);
 }
 
 .translate-btn:hover {
   background-color: var(--primary-dark);
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(52, 152, 219, 0.4);
+}
+
+.translate-btn i {
+  font-size: 1.1rem;
 }
 
 /* Recording Indicator */
@@ -315,45 +327,28 @@ footer {
 @media (min-width: 768px) {
   .transcription-area {
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
-    gap: 70px;
-    position: relative;
-    padding: 0;
+    gap: 30px;
   }
   
   .source-transcript, .target-transcript {
     flex: 1;
-    max-width: calc(50% - 35px);
+    max-width: calc(50% - 15px);
+    margin-bottom: 0;
+  }
+  
+  .translate-btn-container {
+    order: 3;
+    margin-top: 25px;
   }
   
   .translate-btn {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 10;
-    height: auto;
-    width: auto;
-    flex-direction: row;
-    padding: 1rem 2rem;
-    font-size: 1rem;
-    min-width: 160px;
-    white-space: nowrap;
-    background-color: var(--primary-color);
-    border-radius: 30px; /* Bordes más redondeados */
-    box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3); /* Sombra suave */
-  }
-
-  .translate-btn:hover {
-    transform: translate(-50%, -50%) scale(1.05); /* Efecto de escala al hover */
-    box-shadow: 0 6px 16px rgba(52, 152, 219, 0.4);
-  }
-
-  .translate-btn i {
-    margin: 0 8px 0 0; /* Espaciado entre icono y texto */
-    font-size: 1.2rem; /* Tamaño de icono */
+    min-width: 180px;
+    padding: 0.85rem 2rem;
   }
 }
+
 @media (max-width: 767px) {
   .language-box {
     min-width: 120px;
@@ -365,6 +360,11 @@ footer {
   
   .transcript-content {
     min-height: 120px;
+  }
+  
+  .translate-btn {
+    width: 80%;
+    max-width: 200px;
   }
 }
 
