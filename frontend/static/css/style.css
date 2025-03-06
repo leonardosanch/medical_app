@@ -332,11 +332,15 @@ footer {
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 10;
-    height: 150px; /* Altura fija para el botón vertical */
-    width: 50px; /* Ancho reducido */
+    height: 120px; /* Altura fija para el botón vertical */
+    width: 40px; /* Ancho reducido */
     flex-direction: column; /* Apilar el contenido verticalmente */
     font-size: 0.8rem;
+    margin:0;
     padding: 10px 5px;
+  }
+  .translate-btn i {
+    margin-bottom: 5px;
   }
 }
 
