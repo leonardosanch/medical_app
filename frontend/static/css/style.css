@@ -316,21 +316,27 @@ footer {
   .transcription-area {
     flex-direction: row;
     justify-content: space-between;
-    gap: 30px;
+    gap: 70px;
     position: relative;
     padding: 0;
   }
   
   .source-transcript, .target-transcript {
     flex: 1;
-    max-width: calc(50% - 15px);
+    max-width: calc(50% - 35px);
   }
   
   .translate-btn {
-    position: static;
-    display: block;
-    margin: 1rem auto;
-    transform: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    height: 150px; /* Altura fija para el botón vertical */
+    width: 50px; /* Ancho reducido */
+    flex-direction: column; /* Apilar el contenido verticalmente */
+    font-size: 0.8rem;
+    padding: 10px 5px;
   }
 }
 
