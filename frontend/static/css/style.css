@@ -209,22 +209,23 @@ header h1 {
   background-color: #f8f9fa;
 }
 
-/* Translation Button */
+/* Translation Button - Ajustes estéticos */
 .translate-btn {
   background-color: var(--primary-color);
   color: white;
   border: none;
   border-radius: var(--border-radius);
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
+  padding: 0.5rem 1rem; /* Reducir el padding */
+  font-size: 0.9rem; /* Reducir tamaño de fuente */
   cursor: pointer;
   transition: var(--transition);
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
-  margin: 1rem auto;
-  min-width: 150px;
+  gap: 0.3rem;
+  margin: 0.5rem auto; /* Reducir margen vertical */
+  min-width: 120px; /* Reducir ancho mínimo */
+  max-width: 150px; /* Limitar ancho máximo */
 }
 
 .translate-btn:hover {
