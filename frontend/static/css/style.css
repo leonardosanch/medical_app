@@ -326,27 +326,34 @@ footer {
     max-width: calc(50% - 35px);
   }
   
-  translate-btn {
+  .translate-btn {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 10;
-    height: auto; /* Altura automática */
-    width: auto; /* Ancho automático */
-    flex-direction: row; /* Icono y texto en línea */
-    padding: 1rem 2rem; /* Espaciado adecuado */
-    font-size: 1rem; /* Tamaño de fuente legible */
-    min-width: 160px; /* Ancho mínimo suficiente */
-    white-space: nowrap; /* Evitar salto de línea */
+    height: auto;
+    width: auto;
+    flex-direction: row;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    min-width: 160px;
+    white-space: nowrap;
+    background-color: var(--primary-color);
+    border-radius: 30px; /* Bordes más redondeados */
+    box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3); /* Sombra suave */
+  }
+
+  .translate-btn:hover {
+    transform: translate(-50%, -50%) scale(1.05); /* Efecto de escala al hover */
+    box-shadow: 0 6px 16px rgba(52, 152, 219, 0.4);
   }
 
   .translate-btn i {
-    margin-bottom: 0;
-    margin-right: 8px; /* Espaciado entre icono y texto */
+    margin: 0 8px 0 0; /* Espaciado entre icono y texto */
+    font-size: 1.2rem; /* Tamaño de icono */
   }
 }
-
 @media (max-width: 767px) {
   .language-box {
     min-width: 120px;
